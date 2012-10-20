@@ -49,6 +49,7 @@ void QMLPDFView::setSource(const QString &url)
 {
     if((!url.isEmpty()) && (url != _source)) {
         _source = url;
+        _currentPage = 0;
         loadPDF();
         emit sourceChanged();
     } else {
